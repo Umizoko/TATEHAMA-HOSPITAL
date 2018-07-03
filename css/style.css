@@ -282,6 +282,10 @@ header nav ul li a{
     padding: 10px 0 5px;
     padding-left: 1em;
 }
+
+#g_first ol li i{
+    padding-right: 1em;
+}
 /* guide.html start */
 
 /* access.html start */
