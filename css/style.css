@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: "Meiryo";
+    color: #333;
 }
 
 .fix{
@@ -93,7 +94,31 @@ header nav ul li a{
     padding: 18px;
     width: 100%;
     text-decoration-line: none;
-    color: #222;
+}
+
+.animation_border {
+    position: relative;
+}
+
+.animation_border::after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid skyblue;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.animation_border:hover::after {
+    width: 50%;
+    transition: 2s;
+}
+
+
+.selected_nav {
+    border-bottom:4px solid skyblue;
 }
 
 #wrapper {
@@ -117,7 +142,6 @@ header nav ul li a{
     text-align: center;
     padding: 50px 0 0;
     margin: 0 auto;
-    color:  #222;
 }
 
 /* index.html start*/
@@ -144,12 +168,11 @@ header nav ul li a{
 }
 
 #hello h1 {
-    color: #222;
+    color: #333;
 }
 
 #hello h3 {
     margin: 0;
-    color: #222;
 }
 
 #newsguide {
@@ -193,12 +216,11 @@ header nav ul li a{
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     border-right: 1px solid rgba(0,0,0,0.125);
     padding: 25px;
-    color:  #222;
 }
 
 #guide ol {
     list-style: none;
-    padding-left: 1em;
+    padding-left: 2em;
     padding-top: 30px;
     padding-bottom: 15px;
     margin: 0;
@@ -219,11 +241,11 @@ header nav ul li a{
     border-left: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     border-right: 1px solid rgba(0,0,0,0.125);
-    color:  #222;
 }
 
 #g_guide dl {
     height: auto;
+    padding-left: 2em;
 }
 
 #g_guide dl dt {
@@ -248,16 +270,17 @@ header nav ul li a{
     border-left: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     border-right: 1px solid rgba(0,0,0,0.125);
-    color:  #222;
 }
 
 #g_first ol {
     list-style-type: none;
+    padding: 0;
+    padding-left: 2em;
 }
 
 #g_first ol li {
-    padding-left: 1em;
     padding: 10px 0 5px;
+    padding-left: 1em;
 }
 /* guide.html start */
 
@@ -269,7 +292,6 @@ header nav ul li a{
     padding: 100px;
     border-top: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    color:  #222;
 }
 
 #image {
@@ -307,7 +329,6 @@ header nav ul li a{
 
 /* contact.html start */
 #form{
-    color:  #222;
     width: 70%;
     border: 1px solid skyblue;
     margin: 50px auto 50px;
@@ -331,6 +352,7 @@ form dl dt {
     float: left;
     width: 50%;
     padding: 10px 0 5px;
+    padding-left: 12em;
 }
 
 form dl dd {
@@ -358,10 +380,43 @@ form #detail {
 }
 
 #submit_button {
-    text-align: center;
+    width: 7em;
+    margin: 10px auto 0;
 }
 
 /* contact.html end */
+
+/* send.html start */
+#message {
+    width: 70%;
+    height: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 25px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0,0,0,0.125);
+    text-align: center;
+}
+
+#message h1 {
+    padding: 200px 0 0;
+    margin: 0;
+}
+
+#message h2 {
+    padding: 50px 0 0;
+    margin: 0;
+}
+
+#message a {
+    display: block;
+    padding: 50px 0 0;
+    margin: 0;
+}
+
+/* send.html end */
 
 .call {
     width: 70%;
@@ -374,14 +429,12 @@ form #detail {
     margin: 0;
     text-align: center;
     padding: 50px 0 25px 0;
-    color:  #222;
 }
 
 .call #call_num{
     margin: 0;
     text-align: center;
     padding: 25px 0 50px 0;
-    color:  #222;
 }
 
 footer {
@@ -391,12 +444,16 @@ footer {
 }
 
 footer ul {
-    padding: 30px 10px;
+    padding: 100px 10px 0;
     margin: 0;
     float: right;
     list-style-type: none;
 }
 
 footer ul li {
+    color: white;
+}
+
+footer ul li i {
     color: white;
 }
