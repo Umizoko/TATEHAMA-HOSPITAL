@@ -113,6 +113,14 @@ header nav ul li a{
     padding: 0;
 }
 
+.main_title {
+    text-align: center;
+    padding: 0;
+    margin: 50px auto;
+    color:  #222;
+}
+
+/* index.html start*/
 #top_photo {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -128,7 +136,6 @@ header nav ul li a{
     background: white;
     margin: 50px auto 0;
     padding: 50px;
-    /* border: 1px solid black; */
     border-top: 1px solid rgba(0,0,0,0.1);
     border-left: 1px solid rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -187,20 +194,120 @@ header nav ul li a{
 
 #guide ol {
     list-style: none;
-    padding-left: 20px;
+    padding-left: 1em;
     padding-top: 30px;
     padding-bottom: 15px;
     margin: 0;
 }
 
 #guide ol li {
-    padding-left: 20px;
+    padding-left: 1em;
 }
+/* index.html start*/
+
+/* guide.html start */
+#g_guide {
+    width: 70%;
+    margin: 50px auto 0;
+    background: white;
+    padding: 25px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0,0,0,0.125);
+    color:  #222;
+}
+
+#g_guide dl {
+    height: auto;
+}
+
+#g_guide dl dt {
+    float: left;
+    width: 20%;
+    padding: 10px 0 5px;
+}
+
+#g_guide dl dd {
+    float: left;
+    width: 80%;
+    margin: 0;
+    padding: 10px 0 5px;
+}
+
+#g_first {
+    width: 70%;
+    margin: 50px auto 0;
+    background: white;
+    padding: 25px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0,0,0,0.125);
+    color:  #222;
+}
+
+#g_first ol {
+    list-style-type: none;
+}
+
+#g_first ol li {
+    padding-left: 1em;
+    padding: 10px 0 5px;
+}
+/* guide.html start */
+
+/* access.html start */
+#a_map {
+    width: 100%;
+    margin: 50px auto 0;
+    background: white;
+    padding: 100px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    color:  #222;
+}
+
+#image {
+    width: 60%;
+    float:left;
+    height: 400px;
+    background: black;
+}
+
+#image img {
+}
+
+#detail {
+    width: 40%;
+    float: left;
+    padding: 30px;
+}
+
+#detail #adress dl dt{
+    float: left;
+}
+
+#detail #adress dl dd{
+    float: left;
+    padding-left: 1em;
+    margin: 0;
+}
+
+#detail #route dl dt{
+    padding: 10px 0 5px;
+}
+
+#detail #route dl dd{
+    padding: 10px 0 5px;
+}
+
+/* access.html end */
 
 .call {
     width: 70%;
     border: 1px solid skyblue;
-    margin: 30px auto 60px;
+    margin: 50px auto 50px;
     border-radius: 5px;
 }
 
