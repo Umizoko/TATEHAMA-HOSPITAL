@@ -32,7 +32,7 @@
             <div id="main">
                 <!-- top -->
                 <div id="top_photo">
-                    <img src="images/building-2654823_1920.jpg" alt="top image">
+                    <img id="top_image" src="images/hospital_front.jpg" alt="top image">
                 </div>
 
                 <!-- hello -->
@@ -95,5 +95,34 @@
                 <li><i class="fas fa-phone"></i> 0123-001-0001</li>
             </ul>
         </footer>
+        <script>
+            var images = [
+                "images/hospital_far.png",
+                "images/hospital_front.jpg",
+                "images/human.png"
+            ];
+            var current = 0;
+            var topImage = document.getElementById("top_image");
+
+            var changeImage = ( ) => {
+                console.log("change", current);
+                topImage.src = images[current];
+                if(current === images.length - 1){
+                    current = 0;
+                }else{
+                    current++;
+                }
+
+                // set duration time
+                var t = 2000;
+                redraw(t);
+            }
+
+            var redraw = (duration) => {
+                setTimeout(changeImage, duration);
+            }
+
+            changeImage();
+        </script>
     </body>
 </html>
