@@ -5,6 +5,7 @@
         <title>縦浜病院>HOME</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/all.css">
+        <script src="js/jquery-2.1.4.min.js"></script>
     </head>
     <body>
         <!-- header -->
@@ -32,8 +33,15 @@
             <div id="main">
                 <!-- top -->
                 <div id="top_photo">
-                    <img id="top_image" src="images/hospital_front.jpg" alt="top image">
+                    <ul>
+                      <li><img src="images/hospital_front.jpg" alt="img1"></li>
+                      <li><img src="images/hospital_far.png" alt="img2"></li>
+                      <li><img src="images/human.png" alt="img3"></li>
+                    </ul>
+                    <!--                        スライドショーの高さ保管用-->
+                    <img src="images/backscreen.png" alt="img3">
                 </div>
+
 
                 <!-- hello -->
                 <div id="hello">
@@ -44,8 +52,14 @@
                 <!-- news and guide -->
                 <div id="newsguide">
                     <div id="news">
+                        <p>新着情報</p>
                         <ol>
-                            新着情報
+                            <li>2018/07/01: 休診日</li>
+                            <li>2018/07/01: 休診日</li>
+                            <li>2018/07/01: 休診日</li>
+                            <li>2018/07/01: 休診日</li>
+                            <li>2018/07/01: 休診日</li>
+                            <li>2018/07/01: 休診日</li>
                             <li>2018/07/01: 休診日</li>
                             <li>2018/07/01: 休診日</li>
                             <li>2018/07/01: 休診日</li>
@@ -96,33 +110,32 @@
             </ul>
         </footer>
         <script>
-            var images = [
-                "images/hospital_far.png",
-                "images/hospital_front.jpg",
-                "images/human.png"
-            ];
-            var current = 0;
-            var topImage = document.getElementById("top_image");
-
-            var changeImage = ( ) => {
-                console.log("change", current);
-                topImage.src = images[current];
-                if(current === images.length - 1){
-                    current = 0;
-                }else{
-                    current++;
-                }
-
-                // set duration time
-                var t = 2000;
-                redraw(t);
-            }
-
-            var redraw = (duration) => {
-                setTimeout(changeImage, duration);
-            }
-
-            changeImage();
+            $(document).ready(function(){
+                var count = $("#top_photo li").length;
+                var current = 1;
+                var next = 2;
+                var interval = 3000;
+                var duration = 500;
+                var timer;
+                
+                console.log(count);
+                
+                $("#top_photo li:not(:first-child)").hide();
+                
+                timer = setInterval(slideTimer, interval);
+                
+                function slideTimer(){
+                    $("#top_photo li:nth-child(+" + current + ")").fadeOut(duration);
+                    $("#top_photo li:nth-child(+" + next + ")").fadeIn(duration);
+                    
+                    current = next;
+                    next = ++next;
+                    
+                    if(next > count) {
+                        next = 1;
+                    }
+                };
+            });
         </script>
     </body>
 </html>
