@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/*  common style start*/
 * {
     box-sizing: border-box;
     font-family: "Meiryo";
@@ -149,14 +149,62 @@ header nav ul li a{
     margin: 0 auto;
 }
 
+small {
+    color: #333;
+    opacity: 0.75;
+}
+
+.call {
+    width: 70%;
+    border: 1px solid skyblue;
+    margin: 50px auto 50px;
+    border-radius: 5px;
+}
+
+.call #call_title{
+    margin: 0;
+    text-align: center;
+    padding: 50px 0 25px 0;
+}
+
+.call #call_num{
+    margin: 0;
+    text-align: center;
+    padding: 25px 0 50px 0;
+}
+
+footer {
+    background: skyblue;
+    height: 200px;
+    padding: 10px;
+}
+
+footer ul {
+    padding: 100px 10px 0;
+    margin: 0;
+    float: right;
+    list-style-type: none;
+}
+
+footer ul li {
+    color: white;
+}
+
+footer ul li i {
+    color: white;
+}
+/*  common style end */
+
 /* index.html start*/
 #top_photo {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
+    height: calc(100vh - 100px);
+    overflow-y: hidden;
 }
 
-#top_photo img {
+#top_photo #box {
     width: 100%;
     vertical-align: middle;
 }
@@ -169,6 +217,9 @@ header nav ul li a{
 
 #top_photo ul li {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 #top_photo ul li img{
@@ -402,8 +453,10 @@ form #mail {
 }
 
 form #detail {
+    resize: none;
     width: 25em;
     height: 15em;
+    padding: 1em;
 }
 
 #submit_button {
@@ -445,42 +498,6 @@ form #detail {
 
 /* send.html end */
 
-.call {
-    width: 70%;
-    border: 1px solid skyblue;
-    margin: 50px auto 50px;
-    border-radius: 5px;
-}
-
-.call #call_title{
-    margin: 0;
-    text-align: center;
-    padding: 50px 0 25px 0;
-}
-
-.call #call_num{
-    margin: 0;
-    text-align: center;
-    padding: 25px 0 50px 0;
-}
-
-footer {
-    background: skyblue;
-    height: 200px;
-    padding: 10px;
-}
-
-footer ul {
-    padding: 100px 10px 0;
-    margin: 0;
-    float: right;
-    list-style-type: none;
-}
-
-footer ul li {
-    color: white;
-}
-
-footer ul li i {
-    color: white;
+@media screen and (max-width: 1199){
+    /* mobile */
 }
