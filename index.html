@@ -1,15 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>縦浜病院>HOME</title>
+        <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <script src="js/jquery-2.1.4.min.js"></script>
     </head>
     <body>
         <!-- header -->
-        <header>
+        <header class="fix">
             <div>
                 <a href="index.html"><img src="images/logo.png" alt="Logo">
                 <h1 id="logo_title">縦浜病院</h1></a>
@@ -23,8 +25,6 @@
                 </ul>
             </nav>
         </header>
-        <!-- clear float -->
-        <div class="fix"></div>
         <!-- wrapper -->
         <div id="wrapper">
             <!-- fiexed header blank-->
@@ -42,7 +42,6 @@
                     <img src="images/backscreen.png" alt="img3" id="box">
                 </div>
 
-
                 <!-- hello -->
                 <div id="hello">
                     <h1>ごあいさつ</h1>
@@ -50,7 +49,7 @@
                 </div>
 
                 <!-- news and guide -->
-                <div id="newsguide">
+                <div id="newsguide" class="fix">
                     <div id="news">
                         <p>新着情報</p>
                         <ol>
@@ -89,9 +88,6 @@
                         </ol>
                     </div>
                 </div>
-
-                <!-- clear float -->
-                <div class="fix"></div>
 
                 <!-- call contents -->
                 <div class="call">

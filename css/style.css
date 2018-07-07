@@ -1,14 +1,73 @@
 @charset "UTF-8";
 /*  common style start*/
-* {
-    box-sizing: border-box;
+html {
     font-family: "Meiryo";
     color: #333;
+    font-size: 62.5%;
+    font-size: 16px;
 }
 
-.fix{
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.fix::after{
+    content:"";
+    display: block;
     clear: both;
-    overflow: hidden;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+h1 {
+    display: block;
+    font-size: 2rem;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+small {
+    font-size: smaller;
+}
+
+ul, menu, dir {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+ol {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+dd {
+    margin-left: 1rem;
 }
 
 body{
@@ -28,7 +87,6 @@ header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background: white;
     z-index: 1;
-
 }
 
 header div {
@@ -67,7 +125,6 @@ header nav {
 
 header nav ul {
     list-style-type: none;
-/*    padding: 20px 0;*/
     padding: 0;
     margin: 0;
     height: 100%;
@@ -98,6 +155,7 @@ header nav ul li a{
     padding: 18px;
     width: 100%;
     text-decoration-line: none;
+    color: #333;
 }
 
 .animation_border {
@@ -277,6 +335,7 @@ footer ul li i {
 
 #news ol li {
     border-bottom: 1px dashed #222;
+    font-size: 1.25rem;
 }
 
 #guide {
@@ -498,6 +557,455 @@ form #detail {
 
 /* send.html end */
 
-@media screen and (max-width: 1199){
-    /* mobile */
+/* screen size 1200px未満*/
+@media only screen and (max-width: 1199px){
+    /* mobile and tablet and row resolution screen*/
+    body{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: #f8f8f8;
+    }
+
+    header {
+        position: static;
+        top: 0;
+        width: 100%;
+        height: 200px;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        background: white;
+        z-index: 1;
+    }
+
+    header div {
+        display: none;
+    }
+
+    header nav {
+        float: right;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        height: 50%;
+    }
+
+    header nav ul li {
+        padding: 20px 0;
+        float: left;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        border: 1px solid skyblue;
+    }
+
+    header nav ul li:nth-child(3){
+        border-top: none;
+    }
+
+    header nav ul li:nth-child(4){
+        border-top: none;
+    }
+
+    header nav ul li:nth-child(2n){
+        border-left: none;
+    }
+
+    header nav ul li:last-child{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+
+    header nav ul li a{
+        display: block;
+        padding: 18px;
+        width: 100%;
+        text-decoration-line: none;
+    }
+
+    .animation_border {
+        position: relative;
+    }
+
+    .animation_border::after {
+        display: none;
+    }
+
+    .animation_border:hover::after {
+        width: 50%;
+        transition: 2s;
+    }
+
+
+    .selected_nav {
+        height: 100%;
+        border-bottom:4px solid skyblue;
+    }
+    
+    #wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #header_blank {
+        display: none;
+    }
+
+    #wrapper #main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main_title {
+        text-align: center;
+        padding: 50px 0 0;
+        margin: 0 auto;
+    }
+
+    small {
+        color: #333;
+        opacity: 0.75;
+    }
+
+    .call {
+        width: 90%;
+        border: 1px solid skyblue;
+        margin: 50px auto 50px;
+        border-radius: 5px;
+    }
+
+    .call #call_title{
+        margin: 0;
+        text-align: center;
+        padding: 50px 0 25px 0;
+        font-size: 2.0rem;
+    }
+
+    .call #call_num{
+        margin: 0;
+        text-align: center;
+        padding: 25px 0 50px 0;
+        font-size: 1.5rem;
+    }
+
+    footer {
+        background: skyblue;
+        height: 200px;
+        padding: 10px;
+    }
+
+    footer ul {
+        padding: 100px 10px 0;
+        margin: 0;
+        float: right;
+        list-style-type: none;
+    }
+
+    footer ul li {
+        color: white;
+    }
+
+    footer ul li i {
+        color: white;
+    }
+    
+/*    index html*/
+    #top_photo {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+        height: auto;
+    }
+
+    #top_photo #box {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    #top_photo ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    #top_photo ul li {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    #top_photo ul li img{
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    #hello {
+        text-align: center;
+        width: 90%;
+        background: white;
+        margin: 50px auto 50px;
+        padding: 50px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-left: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        border-right: 1px solid rgba(0,0,0,0.125);
+        height: 300px;
+        overflow-y: scroll;
+    }
+
+    #hello h1 {
+        color: #333;
+    }
+
+    #hello h3 {
+        margin: 0;
+    }
+
+    #newsguide {
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+
+    #news {
+        float: none;
+        width: 90%;
+        background: white;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        height: 100%;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-left: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        border-right: 1px solid rgba(0,0,0,0.125);
+        padding: 25px;
+        color:  #222;
+        height: 300px;
+    }
+
+    #news ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 80%;
+        overflow-y: scroll;
+    }
+
+    #news ol li {
+        border-bottom: 1px dashed #222;
+    }
+
+    #guide {
+        float: none;
+        width: 90%;
+        
+        background: white;
+        margin: 0 auto;
+
+        height: 100%;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-left: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        border-right: 1px solid rgba(0,0,0,0.125);
+        padding: 25px;
+    }
+
+    #guide ol {
+        list-style: none;
+        padding-left: 0;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+
+    #guide ol li {
+        padding-left: 1rem;
+    }
+
+    /* index.html */
+
+    /* guide.html start */
+    #g_guide {
+        width: 90%;
+        margin: 50px auto 0;
+        background: white;
+        padding: 25px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-left: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        border-right: 1px solid rgba(0,0,0,0.125);
+    }
+
+    #g_guide dl {
+        height: auto;
+        /* padding-left: 2em; */
+        padding: 0;
+    }
+
+    #g_guide dl dt {
+        float: left;
+        margin: 0;
+        width: 50%;
+        padding: 10px 0 5px;
+    }
+
+    #g_guide dl dd {
+        float: left;
+        width: 50%;
+        margin: 0;
+        padding: 10px 0 5px;
+    }
+
+    #g_first {
+        width: 90%;
+        margin: 50px auto 0;
+        background: white;
+        padding: 25px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-left: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        border-right: 1px solid rgba(0,0,0,0.125);
+    }
+
+    #g_first ol {
+        list-style-type: none;
+        padding: 0;
+        padding-left: 0;
+    }
+
+    #g_first ol li {
+        padding: 10px 0 5px;
+        padding-left: 1rem;
+    }
+
+    #g_first ol li i{
+        padding-right: 1rem;
+    }
+    /* guide.html start */
+
+    /* access.html start */
+    #a_map {
+        width: 100%;
+        margin: 0;
+        padding: 100px;
+        padding: 0;
+        border: none;
+        background: #f8f8f8;
+    }
+
+    #image {
+        width: 90%;
+        margin: 50px auto 50px;
+        float: none;
+        height: 400px;
+        background: white;
+     }
+
+    #detail {
+        margin: 0 auto 50px;
+        width: 90%;
+        float: none;
+        padding: 30px;
+        background: white;
+    }
+
+    #detail #adress dl dt{
+        float: left;
+    }
+
+    #detail #adress dl dd{
+        float: left;
+        padding-left: 1em;
+        margin: 0;
+    }
+
+    #detail #route dl dt{
+        padding: 10px 0 5px;
+    }
+
+    #detail #route dl dd{
+        padding: 10px 0 5px;
+    }
+
+    /* access.html end */
+
+    /* contact.html start */
+    #form{
+        width: 90%;
+        border: 1px solid skyblue;
+        margin: 50px auto 50px;
+        border-radius: 5px;
+        padding: 25px;
+    }
+
+    #form h1 {
+        text-align: center;
+    }
+
+    #form form dl {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    form dl dt {
+        float: none;
+        width: 100%;
+        padding: 10px 0 5px;
+        padding-left: 0;
+    }
+
+    form dl dd {
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0 5px;
+        padding-left: 1rem;
+    }
+
+    form #name {
+        width: 10rem;
+    }
+
+    form #id {
+        width: 10rem;
+    }
+
+    form #mail {
+        width: 10rem;
+    }
+
+    form label {
+        width: 90%;
+        display: block;
+    }
+
+    form #detail {
+        resize: none;
+        width: 80%;
+        height: 5rem;
+        padding: 1em;
+        margin-bottom: 25px;
+    }
+
+    #submit_button {
+        width: 7em;
+        margin: 0 auto ;
+    }
+
+/* contact.html end */
 }

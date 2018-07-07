@@ -1,14 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>縦浜病院</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>縦浜病院＞お問い合わせ</title>
+        <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     </head>
     <body>
         <!-- header -->
-        <header>
+        <header class="fix">
             <div>
                 <a href="index.html"><img src="images/logo.png" alt="Logo">
                 <h1 id="logo_title">縦浜病院</h1></a>
@@ -22,8 +24,6 @@
                 </ul>
             </nav>
         </header>
-        <!-- afterの使い方 -->
-        <div class="fix"></div>
         <!-- wrapper -->
         <div id="wrapper">
             <!-- fiexed header blank-->
@@ -41,7 +41,7 @@
                 <!-- <div class="fix"></div> -->
 
                 <!-- form -->
-                <div id="form">
+                <div id="form" class="fix">
                     <h1>フォームでのお問い合わせはこちらから</h1>
                     <form method="post" action="send.html">
                         <dl>
@@ -64,7 +64,6 @@
                             <input type="submit" id="submit_button" value="送信">
                         </p>
                     </form>
-                <div class="fix"></div>
                 </div>
             </div>
         </div>
