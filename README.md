@@ -6,8 +6,7 @@
 
 ## Description
 
-詳細:3行
-アピールポイント
+架空の病院のHP。レスポンシブ対応。
 
 website: [https://umizoko.github.io/tatehama_hospital/](https://umizoko.github.io/tatehama_hospital/)
 
